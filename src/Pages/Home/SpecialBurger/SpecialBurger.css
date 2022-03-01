@@ -1,5 +1,5 @@
 .special_burger_container {
-  height: 80vh;
+  height: 60vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../../images/burger.png");
   background-position: center;
