@@ -3,7 +3,10 @@ import React from 'react';
 const NotFound = () => {
     return (
         <div className='h-screen flex justify-center items-center'>
-            <h2>404 error</h2>
+            <div>
+                <h2 className='text-9xl text-red-600'>404!</h2>
+                <p className='text-center text-xl'>page not found</p>
+            </div>
         </div>
     );
 };

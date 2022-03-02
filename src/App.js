@@ -1,30 +1,44 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
+import BackToTop from './Pages/BackToTop/BackToTop';
 import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
-import Footer from './Pages/Shared/Footer/Footer';
-import Navbar from './Pages/Shared/Navbar/Navbar';
-// import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import RestaurantFoods from './Pages/RestaurantFoods/RestaurantFoods';
+import SignUp from './Pages/SignUp/SignUp';
+
 
 function App() {
   return (
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-      </Router>
+      <div>
+        <BackToTop></BackToTop>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/restaurantFood/:id">
+              <RestaurantFoods></RestaurantFoods>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/signup">
+              <SignUp></SignUp>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
   );
 }
 
