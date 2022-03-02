@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import useFirebase from '../../../hooks/useFirebase';
 import './Navbar.css'
 
 const Navbar = () => {
+    const {user, logOut} = useFirebase();
     return (
         <div className='bg-gray-800'>
             <div className='mx-10 md:mx-20 lg:mx-60'>
@@ -20,7 +22,20 @@ const Navbar = () => {
                         </div>
                         <div className='pl-6'>
                             <NavLink to='/login'>
-                                <button className='py-2 px-6 bg-yellow-600 border text-lg font-bold hover:bg-yellow-800 rounded-lg'>Login</button>
+                                {
+                                    user.email && <span className='text-gray-50'>hello, {user.displayName}</span>
+                                }
+                                {
+                                    user.email?
+                                    <button 
+                                    onClick={logOut}
+                                    className='py-2 px-6 bg-yellow-600 border text-lg font-bold hover:bg-yellow-800 rounded-lg'
+                                    >Logout</button>
+                                    :
+                                    <button 
+                                    className='py-2 px-6 bg-yellow-600 border text-lg font-bold hover:bg-yellow-800 rounded-lg'
+                                    >Login</button>
+                                }
                             </NavLink>
                         </div>
                     </div>

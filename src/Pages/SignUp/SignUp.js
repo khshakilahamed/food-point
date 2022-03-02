@@ -4,8 +4,10 @@ import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import googleIcon from '../../images/google.png'
 import { NavLink } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const SignUp = () => {
+    const {user, signInUsingGoogle} = useFirebase();
     return (
         <div>
             <Navbar></Navbar>
@@ -27,7 +29,10 @@ const SignUp = () => {
                             <p className='text-center'>Log in using the following</p>
                             <div className='flex justify-center items-center bg-lime-500 px-4 hover:bg-lime-600'>
                                 <p className='p-2'><img style={{width:'24px', height:'24px'}} src={googleIcon} alt="" /></p>
-                                <button className='py-3 font-bold '>LOG IN WITH GOOGLE</button>
+                                <button 
+                                className='py-3 font-bold '
+                                onClick={signInUsingGoogle}
+                                >LOG IN WITH GOOGLE</button>
                             </div>
                         </div>
                     </div>

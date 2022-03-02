@@ -4,13 +4,17 @@ import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import googleIcon from '../../images/google.png'
 import { NavLink } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
+    const {user, signInUsingGoogle} = useFirebase();
     return (
         <div>
             <Navbar></Navbar>
             <div className='mx-10 md:mx-20 lg:mx-44 xl:mx-60'>
-                <h2 className='text-center text-7xl font-thin py-10'>Log In</h2>
+                <div className='text-center'>
+                    <h2 className='text-center text-7xl font-thin py-10 inline-block border-b-2 border-yellow-500'>Log In</h2>
+                </div>
                 <div className='md:flex my-20'>
                     <div className='md:border-r-2 md:w-1/2  md:pr-16 lg:pr-24 pb-10 md:pb-0 '>
                         <form className='flex flex-col' action="">
@@ -26,7 +30,10 @@ const Login = () => {
                             <p className='text-center'>Log in using the following</p>
                             <div className='flex justify-center items-center bg-lime-500 px-4 hover:bg-lime-600'>
                                 <p className='p-2'><img style={{width:'24px', height:'24px'}} src={googleIcon} alt="" /></p>
-                                <button className='py-3 font-bold '>LOG IN WITH GOOGLE</button>
+                                <button 
+                                className='py-3 font-bold '
+                                onClick={signInUsingGoogle}
+                                >LOG IN WITH GOOGLE</button>
                             </div>
                         </div>
                     </div>
