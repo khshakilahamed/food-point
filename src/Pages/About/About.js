@@ -8,7 +8,7 @@ const About = () => {
         <div>
             <Navbar></Navbar>
             <div className='mx-10 md:mx-20 lg:mx-60'>
-                <div className='about_container h-screen flex justify-center items-center'>
+                <div className='about_container h-screen flex justify-center items-center pt-16'>
                     {/* <h2>This is About page.</h2> */}
                 </div>
             </div>

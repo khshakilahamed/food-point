@@ -11,7 +11,7 @@ const Login = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-20 lg:mx-44 xl:mx-60'>
+            <div className='mx-10 md:mx-20 lg:mx-44 xl:mx-60 pt-16'>
                 <div className='text-center'>
                     <h2 className='text-center text-7xl font-thin py-10 inline-block border-b-2 border-yellow-500'>Log In</h2>
                 </div>

@@ -28,7 +28,7 @@ const RestaurantFoods = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-20 lg:mx-60'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-60 pt-24'>
                 <div className='md:flex py-10'>
                     <div className='md:w-1/2'>
                         <img style={{height: '500px'}} className="w-full" src={restaurant_img} alt="" />

@@ -7,7 +7,7 @@ const Restaurant = (props) => {
     const {res_id, restaurant_name, restaurant_img, time} = props.restaurant; 
     // console.log(id);
     return (
-        <div style={{background:'#FFAD00'}} className=' p-4 rounded-3xl' >
+        <div style={{background:'#FFAD00'}} className=' p-4 rounded-3xl ' >
             <div>
                 <img className='w-full h-full rounded-3xl' style={{height:"300px"}} src={restaurant_img} alt="" />
             </div>
