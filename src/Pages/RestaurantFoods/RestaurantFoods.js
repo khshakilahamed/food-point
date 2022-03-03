@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
-import Food from '../Food/Food';
+import Food from '../RestaurantFood/RestaurantFood';
 import { FaFacebook, FaTwitter, FaGooglePlus, FaMapMarkerAlt, FaDoorOpen, FaPhoneAlt, FaBusinessTime } from "react-icons/fa";
 
 const RestaurantFoods = () => {
@@ -29,11 +29,11 @@ const RestaurantFoods = () => {
         <div>
             <Navbar></Navbar>
             <div className='mx-10 md:mx-20 lg:mx-60'>
-                <div className='flex py-10'>
-                    <div className='w-1/2'>
+                <div className='md:flex py-10'>
+                    <div className='md:w-1/2'>
                         <img style={{height: '500px'}} className="w-full" src={restaurant_img} alt="" />
                     </div>
-                    <div className='w-1/2 px-8 space-y-4'>
+                    <div className='md:w-1/2 md:px-8 space-y-4 pt-8 md:pt-0'>
                         <h2 className='text-5xl font-bold'>  {restaurant_name}</h2>
                         <div className='flex items-center'>
                             <FaMapMarkerAlt/>
@@ -53,7 +53,7 @@ const RestaurantFoods = () => {
                 <div className='text-center'>
                     <h2 className='inline-block text-5xl font-bold py-8 mb-10 border-yellow-500 border-b-4'>Foods</h2>
                 </div>
-                <div className='grid grid-cols-3 g-4'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-10'>
                     {
                         foods?.map(singleFood => <Food food={singleFood} key={singleFood.food_id}></Food>)
                     }
