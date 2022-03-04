@@ -40,9 +40,9 @@ const Navbar = () => {
                         </div>
                         <div className='pl-6'>
                             <NavLink to='/login'>
-                                {
-                                    user.email && <span className='text-gray-50'>hello, {user.displayName}</span>
-                                }
+                                {/* {
+                                    user.email && <span className='hidden 2xl:flex text-gray-50'>hello, {user.displayName}</span>
+                                } */}
                                 {
                                     user.email?
                                     <button 

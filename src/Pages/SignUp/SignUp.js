@@ -4,10 +4,10 @@ import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import googleIcon from '../../images/google.png'
 import { NavLink } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const SignUp = () => {
-    const {user, signInUsingGoogle} = useFirebase();
+    const {user, signInUsingGoogle} = useAuth();
     return (
         <div>
             <Navbar></Navbar>

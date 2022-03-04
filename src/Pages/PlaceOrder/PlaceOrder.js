@@ -4,7 +4,7 @@ import Contact from '../Home/Contact/Contact';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 
-const CustomerAddress = () => {
+const PlaceOrder = () => {
     const {id} = useParams();
     console.log(id);
     const [food, setFood] = useState({});
@@ -60,4 +60,4 @@ const CustomerAddress = () => {
     );
 };
 
-export default CustomerAddress;
+export default PlaceOrder;

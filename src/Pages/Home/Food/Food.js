@@ -17,7 +17,7 @@ const Food = ({food}) => {
                 </div>
                 <div className='flex justify-start items-center py-3'>
                     <div className='pr-2'>
-                    <NavLink to={`/customerAddress/${food_id}`}>
+                    <NavLink to={`/placeOrder/${food_id}`}>
                         <button className='bg-lime-500 py-2 px-4 font-bold rounded-3xl hover:bg-lime-700'>Order Now</button>
                     </NavLink>
                     </div>
