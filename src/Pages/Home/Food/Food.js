@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Food = ({food}) => {
     // console.log(food);
-    const {res_id, food_name, img, persons, price} = food;
+    const {res_id,food_id, food_name, img, persons, price} = food;
 
     return (
         <div className='p-3 rounded-3xl' style={{background:'#FFAD00'}}>
@@ -17,7 +17,9 @@ const Food = ({food}) => {
                 </div>
                 <div className='flex justify-start items-center py-3'>
                     <div className='pr-2'>
+                    <NavLink to={`/customerAddress/${food_id}`}>
                         <button className='bg-lime-500 py-2 px-4 font-bold rounded-3xl hover:bg-lime-700'>Order Now</button>
+                    </NavLink>
                     </div>
                     <div>
                         <NavLink to={`/restaurantFood/${res_id}`}>

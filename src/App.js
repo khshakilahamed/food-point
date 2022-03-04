@@ -3,6 +3,7 @@ import './App.css';
 import About from './Pages/About/About';
 import AllStoresFood from './Pages/AllStoresFood/AllStoresFood';
 import BackToTop from './Pages/BackToTop/BackToTop';
+import CustomerAddress from './Pages/CustomerAddress/CustomerAddress';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import MyOrders from './Pages/MyOrders/MyOrders';
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/restaurantFood/:id">
               <RestaurantFoods></RestaurantFoods>
+            </Route>
+            <Route path="/customerAddress/:id">
+              <CustomerAddress></CustomerAddress>
             </Route>
             <Route path="/login">
               <Login></Login>
