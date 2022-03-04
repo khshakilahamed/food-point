@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Food = ({food}) => {
     // console.log(food);
@@ -12,7 +13,9 @@ const Food = ({food}) => {
                     <p className='text-3xl font-bold text-yellow-500'>&#2547; {price}</p>
                     <p>{persons}</p>
                 </div>
-                <button className='bg-lime-500 py-2 px-4 font-bold rounded-3xl hover:bg-lime-700'>Order Now</button>
+                <NavLink to={`/placeOrder/${food_id}`}>
+                        <button className='bg-lime-500 py-2 px-4 font-bold rounded-3xl hover:bg-lime-700'>Order Now</button>
+                    </NavLink>
             </div>
 
         </div>

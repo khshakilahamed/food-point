@@ -5,9 +5,21 @@ import Navbar from '../Shared/Navbar/Navbar';
 import googleIcon from '../../images/google.png'
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Login = () => {
     const {user, signInUsingGoogle} = useAuth();
+    const location = useLocation();
+    const redirect_uri = location.state?.from || '/home';
+    const history = useHistory();
+
+
+    const handleGoogleLogin= () => {
+        signInUsingGoogle()
+        .then(result => {
+            history.push(redirect_uri);
+        })
+    }
     return (
         <div>
             <Navbar></Navbar>
@@ -32,7 +44,7 @@ const Login = () => {
                                 <p className='p-2'><img style={{width:'24px', height:'24px'}} src={googleIcon} alt="" /></p>
                                 <button 
                                 className='py-3 font-bold '
-                                onClick={signInUsingGoogle}
+                                onClick={handleGoogleLogin}
                                 >LOG IN WITH GOOGLE</button>
                             </div>
                         </div>
