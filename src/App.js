@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './context/AuthProvider';
 import About from './Pages/About/About';
 import AllStoresFood from './Pages/AllStoresFood/AllStoresFood';
+import AutoScrollToTop from './Pages/AutoScrollToTop/AutoScrollToTop';
 import BackToTop from './Pages/BackToTop/BackToTop';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
@@ -20,6 +21,7 @@ function App() {
         <AuthProvider>
           <BackToTop></BackToTop>
           <Router>
+            <AutoScrollToTop></AutoScrollToTop>
             <Switch>
               <Route exact path="/">
                 <Home></Home>
