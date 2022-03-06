@@ -13,36 +13,39 @@ const Navbar = () => {
                     <div>
                         <h2 className='text-white text-4xl font-extrabold'><NavLink to="/home">Food<span className='text-yellow-500 '>Point</span></NavLink></h2>
                     </div>
-                    <div className='text-white hidden md:flex justify-between items-center text-base font-semibold'>
+                    <div className=' hidden md:flex justify-between items-center  font-semibold'>
                         <div>
                             <ul className='flex'>
-                                <li className='pl-5'>
+                                <li className='pl-5 text-white text-base'>
                                     <NavLink to="/home" className='pb-3 hover:border-b-2 hover:text-yellow-500'>Home</NavLink>
                                 </li>
-                                <li className='pl-5'>
+                                <li className='pl-5 text-white text-base'>
                                     <NavLink to="/about" className='pb-3 hover:border-b-2 hover:text-yellow-500'>About</NavLink>
                                 </li>
-                                <li className='pl-5'>
+                                <li className='pl-5 text-white text-base'>
                                     <NavHashLink 
                                         to="/home#restaurants"
                                         className='pb-3 hover:border-b-2 hover:text-yellow-500' >Restaurants</NavHashLink>
                                 </li>
-                                <li className='pl-5'>
+                                <li className='pl-5 text-white text-base'>
                                     <NavLink to="/myOrders" className='pb-3 hover:border-b-2 hover:text-yellow-500'>My orders</NavLink>
                                 </li>
-                                <li className='pl-5'>
+                                <li className='pl-5 text-white text-base'>
                                     <NavLink className='pb-3 hover:border-b-2 hover:text-yellow-500' to="/home#restaurants">Manage orders</NavLink>
                                 </li>
-                                <li className='pl-5'>
+                                <li className='pl-5 hidden text-white text-base'>
                                     <NavLink className='pb-3 hover:border-b-2 hover:text-yellow-500' to="/home#restaurants">Add new food</NavLink>
+                                </li>
+                                <li className='pl-4'>
+                                {
+                                    user.email && <span className='hidden 2xl:flex text-gray-400'>signin as, {user.displayName}</span>
+                                }
                                 </li>
                             </ul>
                         </div>
-                        <div className='pl-6'>
+                        <div className='pl-2'>
+                                
                             <NavLink to='/login'>
-                                {/* {
-                                    user.email && <span className='hidden 2xl:flex text-gray-50'>hello, {user.displayName}</span>
-                                } */}
                                 {
                                     user.email?
                                     <button 
