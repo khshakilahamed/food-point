@@ -7,7 +7,6 @@ import Navbar from '../Shared/Navbar/Navbar';
 
 const PlaceOrder = () => {
     const {id} = useParams();
-    // console.log(id);
     const [food, setFood] = useState({});
     const {user} = useAuth();
 
@@ -18,8 +17,29 @@ const PlaceOrder = () => {
         const userPhoneNumber = phoneNumberRef.current.value;
         const userAddress = addressRef.current.value;
 
-        const order = {userPhoneNumber, userAddress, ...food};
-        console.log(order);
+        const date = new Date();
+        const order = {userPhoneNumber, userAddress, date, ...food};
+        
+        if(userPhoneNumber.length==0 || userAddress.length==0){
+            alert('Please provide your name & phone number');
+        }
+
+        else{
+            fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(order)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.insertedId){
+                    window.confirm('Your Order Successful.');
+                    e.target.reset();
+                }
+            })
+        }
 
         e.preventDefault();
     }
