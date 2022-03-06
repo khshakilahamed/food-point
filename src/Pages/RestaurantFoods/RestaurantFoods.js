@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import Food from '../RestaurantFood/RestaurantFood';
-import { FaFacebook, FaTwitter, FaGooglePlus, FaMapMarkerAlt, FaDoorOpen, FaPhoneAlt, FaBusinessTime } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaBusinessTime } from "react-icons/fa";
 
 const RestaurantFoods = () => {
     const {id} = useParams();
@@ -16,7 +16,7 @@ const RestaurantFoods = () => {
     }
 
     useEffect(()=> {
-        fetch('/fakeRestaurants.json')
+        fetch('http://localhost:5000/restaurants')
         .then(res => res.json())
         .then(data => restaurantFinding(data))
     }, []);

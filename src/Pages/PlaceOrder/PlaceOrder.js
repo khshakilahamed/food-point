@@ -7,7 +7,7 @@ import Navbar from '../Shared/Navbar/Navbar';
 
 const PlaceOrder = () => {
     const {id} = useParams();
-    console.log(id);
+    // console.log(id);
     const [food, setFood] = useState({});
     const {user} = useAuth();
 
