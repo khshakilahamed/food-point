@@ -17,8 +17,11 @@ const PlaceOrder = () => {
         const userPhoneNumber = phoneNumberRef.current.value;
         const userAddress = addressRef.current.value;
 
+        const userName = user.displayName;
+        const email = user.email;
+
         const date = new Date();
-        const order = {userPhoneNumber, userAddress, date, ...food};
+        const order = {userName, email, userPhoneNumber, userAddress, date, ...food};
         
         if(userPhoneNumber.length==0 || userAddress.length==0){
             alert('Please provide your name & phone number');
@@ -90,7 +93,7 @@ const PlaceOrder = () => {
                             <input className='border outline-none my-1 p-1 w-full' value={email}  type="email" name="" id="" placeholder='Email Address'/>
                             <input className='border outline-none my-1 p-1 w-full' ref={phoneNumberRef} type="number" name="" id="" placeholder='Phone Number'/>
                             <textarea className='border outline-none my-1 p-1 w-full' ref={addressRef} name="" id="" cols="30" rows="5" placeholder='Your Address'></textarea>
-                            <input className='bg-yellow-500 my-2 p-2' type="submit" value="Submit" />
+                            <input className='bg-yellow-500 my-2 p-2 cursor-pointer font-bold hover:bg-yellow-00' type="submit" value="Submit" />
                         </form>
                     </div>                  
                 </div>
