@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const phoneNumberRef = useRef();
     const addressRef = useRef();
 
-    const orderStatus = 'Pending';
+    const orderStatus = 'pending';
 
     const handleConfirm = (e) => {
         const userPhoneNumber = phoneNumberRef.current.value;
