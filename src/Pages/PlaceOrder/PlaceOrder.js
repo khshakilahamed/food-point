@@ -13,6 +13,8 @@ const PlaceOrder = () => {
     const phoneNumberRef = useRef();
     const addressRef = useRef();
 
+    const orderStatus = 'Pending';
+
     const handleConfirm = (e) => {
         const userPhoneNumber = phoneNumberRef.current.value;
         const userAddress = addressRef.current.value;
@@ -21,7 +23,7 @@ const PlaceOrder = () => {
         const email = user.email;
 
         const date = new Date();
-        const order = {userName, email, userPhoneNumber, userAddress, date, ...food};
+        const order = {userName, email, userPhoneNumber, userAddress, orderStatus, date, ...food};
         
         if(userPhoneNumber.length==0 || userAddress.length==0){
             alert('Please provide your name & phone number');
@@ -56,10 +58,6 @@ const PlaceOrder = () => {
         const matchedFood = foods.find(food => food.food_id === id);
         setFood(matchedFood);
     }
-
-    // console.log(food);
-
-
     
 
     useEffect(() =>{

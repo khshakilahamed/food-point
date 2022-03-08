@@ -7,6 +7,7 @@ import AutoScrollToTop from './Pages/AutoScrollToTop/AutoScrollToTop';
 import BackToTop from './Pages/BackToTop/BackToTop';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
+import Manage from './Pages/MyOrders/Manage';
 import MyOrders from './Pages/MyOrders/MyOrders';
 import NotFound from './Pages/NotFound/NotFound';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
@@ -49,6 +50,9 @@ function App() {
               </Route>
               <Route path="/myOrders">
                 <MyOrders></MyOrders>
+              </Route>
+              <Route path="/manage/:id">
+                <Manage></Manage>
               </Route>
               <Route path="*">
                 <NotFound></NotFound>
