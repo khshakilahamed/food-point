@@ -16,7 +16,7 @@ const Foods = () => {
 
     return (
         <div id='foods' className=' bg-gray-800'>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-60'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44'>
                 <div className='pt-32'>
                     <div className='text-center'>
                         <h2 className='text-white text-5xl font-bold inline-block pb-6 mb-20 border-lime-500 border-b-4'>Foods</h2>

@@ -24,7 +24,7 @@ const Manage = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-60 pt-24'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44 pt-24'>
                 <h2 className='text-2xl font-bold bg-yellow-500 p-2 my-10'>MyOrders/Manage</h2>
                 <div className='md:flex justify-between py-6'>
                     <div className='sm:flex py-5 sm:py-0 md:w-1/2'>

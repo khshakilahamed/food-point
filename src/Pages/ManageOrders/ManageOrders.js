@@ -49,7 +49,7 @@ const ManageOrders = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-60 pt-24'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44 pt-24'>
                <div className='my-10'>
                     <h2 className='px-2 py-3 text-2xl font-bold text-center bg-yellow-500'>Manage All Orders</h2>
                     <div className='overflow-x-auto bg-gray-100 my-3'>

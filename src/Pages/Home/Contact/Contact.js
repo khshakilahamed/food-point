@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaGooglePlus, FaMapMarkerAlt, FaDoorOpen, FaPhon
 const Contact = () => {
     return (
         <div className='bg-black text-white'>
-            <div className='mx-10 md:mx-20 lg:mx-60'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44'>
                 <div className='hidden md:grid grid-cols-3  gap-4 py-10 pt-20'>
                     <div className='flex items-center text-2xl text-center'>
                         <p className='hidden xl:flex'>Follow Us: </p>
