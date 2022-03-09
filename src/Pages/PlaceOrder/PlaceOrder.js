@@ -50,9 +50,9 @@ const PlaceOrder = () => {
     }
 
 
-    const {displayName, email} = user;
+    const {displayName, email} = user || {};
 
-    const {food_name, img, price, des} = food;
+    const {food_name, img, price, des} = food || {};
 
     const findTheFood = (foods) => {
         const matchedFood = foods.find(food => food.food_id === id);
@@ -69,7 +69,7 @@ const PlaceOrder = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-60 pt-24 '>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28 pt-24 '>
                 <div className='text-center my-6'>
                     <h2 className='text-2xl inline border-b-4 pb-3 border-yellow-500 my-5 font-bold'>Please, Provide the delivery address here</h2>
                 </div>

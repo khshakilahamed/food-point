@@ -44,8 +44,8 @@ const MobileNavbar = () => {
                                         <li className='pl-5 text-white md:text-xl'>
                                             <NavLink className='pb-3 hover:border-b-2 hover:text-yellow-500' to="/manageOrders">Manage orders</NavLink>
                                         </li>
-                                        <li className='pl-5 hidden text-white text-base'>
-                                            <NavLink className='pb-3 hover:border-b-2 hover:text-yellow-500' to="/home#restaurants">Add new food</NavLink>
+                                        <li className='pl-5 text-white text-base'>
+                                            <NavLink className='pb-3 hover:border-b-2 hover:text-yellow-500' to="/addNewFood">Add new food</NavLink>
                                         </li>
                                         <li className='pl-4'>
                                         {

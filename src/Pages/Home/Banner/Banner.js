@@ -4,8 +4,8 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className='banner_container pt-16'>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44'>
+        <div className='banner_container pt-20'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28'>
                 <div className='flex justify-start items-center h-screen'>
                     <div className='w-full md:w-2/4 text-white text-center md:text-left '>
                         <h1 className=' text-2xl md:text-4xl lg:text-5xl xl:text-7xl leading-10 font-bold'>Order Healthy And Fresh Food With Fastest Delivery</h1>

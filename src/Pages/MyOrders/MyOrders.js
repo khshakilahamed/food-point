@@ -9,7 +9,6 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const {user} = useAuth();
 
-    // console.log(orders)
 
     const order = (orders) => {
         const matchedOrders = orders.filter(order => order.email === user.email)
@@ -22,16 +21,10 @@ const MyOrders = () => {
         .then(data => order(data))
     }, [orders]);
 
-    // useEffect(()=> {
-    //     fetch('http://localhost:5000/foods')
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    // }, []);
-
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44 pt-24'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28 pt-24'>
                 <div>
                     <div>
                         <h2 className='text-center text-2xl py-2 font-bold my-10 bg-yellow-500 '>My Orders</h2>

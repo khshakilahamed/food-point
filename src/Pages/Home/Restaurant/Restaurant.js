@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const Restaurant = (props) => {
     // console.log(props);
-    const {res_id, restaurant_name, restaurant_img, time} = props.restaurant; 
+    const {res_id, restaurant_name, restaurant_img, time} = props.restaurant || {}; 
     // console.log(id);
     return (
         <div style={{background:'#FFAD00'}} className=' p-4 rounded-3xl ' >

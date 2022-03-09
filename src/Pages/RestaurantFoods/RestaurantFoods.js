@@ -22,13 +22,13 @@ const RestaurantFoods = () => {
     }, []);
 
 
-    const {restaurant_name, restaurant_img, address, time, phone, foods} = restaurant;
+    const {restaurant_name, restaurant_img, address, time, phone, foods} = restaurant || {};
     // console.log(restaurant);
     
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-60 pt-24'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28 pt-24'>
                 <div className='md:flex py-10'>
                     <div className='md:w-1/2'>
                         <img style={{height: '500px'}} className="w-full" src={restaurant_img} alt="" />

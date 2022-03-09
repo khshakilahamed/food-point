@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
 import About from './Pages/About/About';
+import AddNewFood from './Pages/AddNewFood/AddNewFood';
 import AllStoresFood from './Pages/AllStoresFood/AllStoresFood';
 import AutoScrollToTop from './Pages/AutoScrollToTop/AutoScrollToTop';
 import BackToTop from './Pages/BackToTop/BackToTop';
@@ -54,6 +55,9 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/manageOrders">
                 <ManageOrders></ManageOrders>
+              </PrivateRoute>
+              <PrivateRoute path="/addNewFood">
+                <AddNewFood></AddNewFood>
               </PrivateRoute>
               <PrivateRoute path="/manage/:id">
                 <Manage></Manage>

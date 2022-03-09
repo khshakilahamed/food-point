@@ -16,7 +16,7 @@ const AllStoresFood = () => {
         <div>
             <Navbar></Navbar>
             <div className=' bg-gray-800'>
-                <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44 pt-16'>
+                <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28 pt-16'>
                     <div className='pt-20'>
                         <div className='text-center'>
                             <h2 className='text-white text-5xl font-bold inline-block pb-4 mb-20 border-yellow-500 border-b-4'>All Foods</h2>

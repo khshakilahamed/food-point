@@ -11,7 +11,7 @@ const SignUp = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44 pt-24'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28 pt-24'>
                 <h2 className='text-center text-7xl font-thin py-10'>Sign Up</h2>
                 <div className='md:flex my-20'>
                     <div className='md:border-r-2 md:w-1/2  md:pr-16 lg:pr-24 pb-10 md:pb-0 '>

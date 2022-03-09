@@ -49,7 +49,7 @@ const ManageOrders = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-40 2xl:mx-44 pt-24'>
+            <div className='mx-10 md:mx-10 lg:mx-14 xl:mx-20 2xl:mx-28 pt-24'>
                <div className='my-10'>
                     <h2 className='px-2 py-3 text-2xl font-bold text-center bg-yellow-500'>Manage All Orders</h2>
                     <div className='overflow-x-auto bg-gray-100 my-3'>
@@ -68,16 +68,16 @@ const ManageOrders = () => {
                             <tbody>
                                 {
                                     orders.map(order => <tr>
-                                        <td>Name: {order.userName} <br /> Email: {order.email} <br /> Phone: {order.userPhoneNumber}</td>
-                                        <td>{order.userAddress} </td>
-                                        <td>{order.food_name}</td>
-                                        <td>&#2547;{order.price}</td>
-                                        <td>{order.orderStatus}</td>
+                                        <td>Name: {order?.userName} <br /> Email: {order?.email} <br /> Phone: {order?.userPhoneNumber}</td>
+                                        <td>{order?.userAddress} </td>
+                                        <td>{order?.food_name}</td>
+                                        <td>&#2547;{order?.price}</td>
+                                        <td>{order?.orderStatus}</td>
                                         <td>
-                                            <button onClick={() => handleDeleteOrder(order._id)} 
+                                            <button onClick={() => handleDeleteOrder(order?._id)} 
                                             className="border-none bg-red-500 py-1 px-2 rounded rounded-md text-white">Delete</button>
                                             {
-                                                order.orderStatus === 'pending' && <button onClick={() => handleApproveOrder(order._id)} className="border-none bg-green-500 py-1 px-2 rounded rounded-md text-white">Approve</button>
+                                                order?.orderStatus === 'pending' && <button onClick={() => handleApproveOrder(order?._id)} className="border-none bg-green-500 py-1 px-2 rounded rounded-md text-white">Approve</button>
                                             }
                                         </td>
                                     </tr>)
