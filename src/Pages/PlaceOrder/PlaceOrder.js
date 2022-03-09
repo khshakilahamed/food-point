@@ -25,12 +25,12 @@ const PlaceOrder = () => {
         const date = new Date();
         const order = {userName, email, userPhoneNumber, userAddress, orderStatus, date, ...food};
         
-        if(userPhoneNumber.length==0 || userAddress.length==0){
+        if(userPhoneNumber.length===0 || userAddress.length===0){
             alert('Please provide your name & phone number');
         }
 
         else{
-            fetch('http://localhost:5000/orders', {
+            fetch('https://shielded-basin-86876.herokuapp.com/orders', {
             method: 'POST',
             headers:{
                 'content-type':'application/json'
@@ -61,10 +61,10 @@ const PlaceOrder = () => {
     
 
     useEffect(() =>{
-        fetch('/fakeFoods.json')
+        fetch('https://shielded-basin-86876.herokuapp.com/foods')
         .then(res => res.json())
         .then(data => findTheFood(data));
-    }, []);
+    }, [findTheFood]);
 
     return (
         <div>

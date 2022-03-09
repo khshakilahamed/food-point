@@ -3,12 +3,12 @@ import { NavLink } from 'react-router-dom';
 
 const MyOrder = ({order}) => {
     // console.log(order);
-    const {_id, food_name, food_id, img, price, orderStatus} = order || {};
+    const {_id, food_name, img, price, orderStatus} = order || {};
 
     const handleDeleteOrder = (id) => {
         const confirm = window.confirm('Are you sure you want to cancel the order?');
         if(confirm){
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://shielded-basin-86876.herokuapp.com/orders/${id}`, {
                 method:'DELETE',
                 headers:{
                     'content-type':'application.json'

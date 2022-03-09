@@ -7,7 +7,7 @@ const AllStoresFood = () => {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        fetch('./fakeFoods.json')
+        fetch('https://shielded-basin-86876.herokuapp.com/foods')
             .then(res => res.json())
             .then(data => setFoods(data))
     }, []);

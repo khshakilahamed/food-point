@@ -5,7 +5,7 @@ const Restaurants = () => {
     const [restaurants, setRestaurants] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/restaurants')
+        fetch('https://shielded-basin-86876.herokuapp.com/restaurants')
         .then(res => res.json())
         .then(data => setRestaurants(data))
     }, []);

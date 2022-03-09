@@ -13,7 +13,7 @@ const ManageOrders = () => {
             const matchedOrder = orders.filter(order => order._id === id);
             // console.log(matchedOrder)
 
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://shielded-basin-86876.herokuapp.com/orders/${id}`, {
                 method:'PUT',
                 headers:{
                     'content-type':'application.json'
@@ -28,7 +28,7 @@ const ManageOrders = () => {
     const handleDeleteOrder = (id) => {
         const confirm = window.confirm('Are you sure you want to cancel the order?');
         if(confirm){
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://shielded-basin-86876.herokuapp.com/orders/${id}`, {
                 method:'DELETE',
                 headers:{
                     'content-type':'application.json'
@@ -41,7 +41,7 @@ const ManageOrders = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders`)
+        fetch(`https://shielded-basin-86876.herokuapp.com/orders`)
         .then(res => res.json())
         .then(data => setOrders(data))
     }, [orders]);

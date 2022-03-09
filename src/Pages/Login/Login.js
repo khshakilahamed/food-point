@@ -8,7 +8,7 @@ import useAuth from '../../hooks/useAuth';
 import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Login = () => {
-    const {user, signInUsingGoogle} = useAuth();
+    const {signInUsingGoogle} = useAuth();
     const location = useLocation();
     const redirect_uri = location.state?.from || '/home';
     const history = useHistory();

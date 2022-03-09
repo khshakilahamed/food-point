@@ -13,7 +13,7 @@ const Manage = () => {
     const [toggle, setToggle] = useState(false);
 
     useEffect(()=> {
-        fetch(`http://localhost:5000/orders/${id}`)
+        fetch(`https://shielded-basin-86876.herokuapp.com/orders/${id}`)
         .then(res => res.json())
         .then(data => setOrder(data))
     }, [id]);

@@ -16,10 +16,10 @@ const RestaurantFoods = () => {
     }
 
     useEffect(()=> {
-        fetch('http://localhost:5000/restaurants')
+        fetch('https://shielded-basin-86876.herokuapp.com/restaurants')
         .then(res => res.json())
         .then(data => restaurantFinding(data))
-    }, []);
+    }, [restaurantFinding]);
 
 
     const {restaurant_name, restaurant_img, address, time, phone, foods} = restaurant || {};

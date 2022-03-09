@@ -16,10 +16,10 @@ const MyOrders = () => {
     }
 
     useEffect(()=> {
-        fetch('http://localhost:5000/orders')
+        fetch('https://shielded-basin-86876.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => order(data))
-    }, [orders]);
+    }, [orders, order]);
 
     return (
         <div>
