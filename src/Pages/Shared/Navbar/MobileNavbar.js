@@ -23,7 +23,7 @@ const MobileNavbar = () => {
                         {
                             active && <div>
                                 <div className='text-right'>
-                                    <ul className='lg:flex'>
+                                    <ul className='lg:flex space-y-3'>
                                         <div className='text-white flex justify-end'>
                                             <FaRegWindowClose className='text-2xl' onClick={showMenu}/>
                                         </div>
